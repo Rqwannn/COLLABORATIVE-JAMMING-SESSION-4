@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "share_session"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+uvicorn = "^0.23.2"
+langserve = {extras = ["server"], version = ">=0.0.30"}
+pydantic = "<2"
+retrieval-agent-fireworks = {path = "packages\\retrieval-agent-fireworks", develop = true}
+langchain-pinecone = "^0.1.0"
+lxml = "^5.2.1"
+bs4 = "^0.0.2"
+cohere = "^5.4.0"
+langchain-cohere = "^0.1.4"
+langchain-google-genai = "^1.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
